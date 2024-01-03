@@ -41,6 +41,7 @@ body {
 }
 
 .content__title {
+    margin-top: -1rem;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -51,37 +52,49 @@ body {
     font-size: 3rem;
     color: hsl(292, 42%, 14%);
 }
-.content__title img{
+
+.content__title img {
     height: 2.8rem;
 }
 
 .asks__content {
+    cursor: pointer;
     margin-top: 3rem;
     margin-bottom: 1rem;
     display: block;
 }
+
 
 .asks {
     display: flex;
     width: 46rem;
     justify-content: space-between;
 }
-.asks p{
-    color:hsl(292, 42%, 14%);
+
+.asks p {
+    color: hsl(292, 42%, 14%);
     font-size: 1.6rem;
     font-weight: 600;
 }
-.asks button{
-    height: 1rem;
-    background: none;
-    border: none;
-    margin-top: -1rem;
-    cursor: pointer;
+
+.asks img {
+    height: 3rem;
+    margin-top: -.3rem;
 }
 
 
 .ask__descriptions {
     word-break: normal;
-    color:  hsl(292, 16%, 49%);
+    color: hsl(292, 16%, 49%);
     font-size: 1.3rem;
+
+    height: 5;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.asks__content.actived .ask__descriptions {
+    transition: 2s;
+    height: fit-content;
+    opacity: 1;
 }
